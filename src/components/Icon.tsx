@@ -1,0 +1,55 @@
+import {
+  LayoutDashboard, HeartPulse, Wrench, ShieldCheck, BookOpen,
+  Lightbulb, Settings, Wifi, HardDrive, Shield, Activity, Download,
+  Globe, MapPin, Cpu, MemoryStick, Timer, Gauge, Database, Key,
+  Volume2, Printer, Keyboard, Mouse, Mail, Lock, Monitor, Folder,
+  MessageSquare, BatteryCharging, Cloud, RefreshCw, ShieldAlert,
+  ShieldCheck as ShieldCheckIcon, Power, Chrome, FileText, Network,
+  type LucideIcon,
+} from 'lucide-react';
+
+const iconMap: Record<string, LucideIcon> = {
+  'layout-dashboard': LayoutDashboard,
+  'heart-pulse': HeartPulse,
+  wrench: Wrench,
+  'shield-check': ShieldCheck,
+  'book-open': BookOpen,
+  lightbulb: Lightbulb,
+  settings: Settings,
+  wifi: Wifi,
+  'hard-drive': HardDrive,
+  shield: Shield,
+  activity: Activity,
+  download: Download,
+  globe: Globe,
+  'map-pin': MapPin,
+  cpu: Cpu,
+  'memory-stick': MemoryStick,
+  timer: Timer,
+  gauge: Gauge,
+  database: Database,
+  key: Key,
+  'volume-2': Volume2,
+  printer: Printer,
+  keyboard: Keyboard,
+  mouse: Mouse,
+  mail: Mail,
+  lock: Lock,
+  monitor: Monitor,
+  folder: Folder,
+  'message-square': MessageSquare,
+  'battery-charging': BatteryCharging,
+  cloud: Cloud,
+  'refresh-cw': RefreshCw,
+  'shield-alert': ShieldAlert,
+  'shield-check-2': ShieldCheckIcon,
+  power: Power,
+  chrome: Chrome,
+  'file-text': FileText,
+  network: Network,
+};
+
+export function Icon({ name, className }: { name: string; className?: string }) {
+  const Cmp = iconMap[name] || LayoutDashboard;
+  return <Cmp className={className} />;
+}
